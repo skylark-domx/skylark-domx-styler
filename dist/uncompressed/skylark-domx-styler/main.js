@@ -27,7 +27,7 @@ define([
 
         var method = property;
 
-        VisualElement.prototype[method ] = function (value) {
+        velm.VisualElement.prototype[method ] = function (value) {
 
             this.css( property, value );
 
