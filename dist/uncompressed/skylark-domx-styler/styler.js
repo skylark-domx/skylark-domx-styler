@@ -229,12 +229,12 @@ define([
         var self = this;
         name.split(/\s+/g).forEach(function(klass) {
             if (when === undefined) {
-                when = !self.hasClass(elm, klass);
+                when = !hasClass(elm, klass);
             }
             if (when) {
-                self.addClass(elm, klass);
+                addClass(elm, klass);
             } else {
-                self.removeClass(elm, klass)
+                removeClass(elm, klass)
             }
         });
 
