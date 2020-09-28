@@ -228,10 +228,13 @@ define('skylark-domx-styler/styler',[
      * @param {Any} value
      */
     function css(elm, property, value) {
-        if (arguments.length < 3) {
+        //if (arguments.length < 3) {
+        if (value == void 0) {
             var computedStyle,
                 computedStyle = getStyles(elm)
-            if (langx.isString(property)) {
+            if (property == void 0) {
+                return computedStyle;
+            } else if (langx.isString(property)) {
                 return elm.style[camelCase(property)] || computedStyle.getPropertyValue(dasherize(property))
             } else if (langx.isArrayLike(property)) {
                 var props = {}
