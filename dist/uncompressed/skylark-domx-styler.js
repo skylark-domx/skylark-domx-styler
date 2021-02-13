@@ -168,7 +168,7 @@ define('skylark-domx-styler/styler',[
     }
 
     function isInvisible(elm) {
-        return styler.css(elm, "display") == "none" || styler.css(elm, "opacity") == 0;
+        return styler.css(elm, "display") == "none" || styler.css(elm, "opacity") == 0 || styler.css(elm,"visibility") == "hidden";
     }
 
     /*
